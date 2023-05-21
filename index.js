@@ -70,7 +70,7 @@ async function run() {
         res.send(result)
     })
     
-    //Getting Data Here ....................................................................
+    //Getting................git commit -m "Fix line endings"....................................................
     app.get('/products', async(req, res)=>{
             const cursor = productCollection.find();
             const result = await cursor.toArray();
