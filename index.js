@@ -38,7 +38,7 @@ async function run() {
         console.log(req.query.email);
         let query = {};
         if(req.query?.email){
-            query = { email: req.email}
+            query = { email: req.query.email}
         }
         const result = await productCollection.find(query).toArray();
         res.send(result)
@@ -54,9 +54,11 @@ async function run() {
         res.send(result )
 
     })
-    // Put Area
+    // Patch Area
     app.patch('/products/:id', async(req, res)=>{
-        const updatedProduct = req.body; 
+        const updatedProduct = req.body;
+        console.log(updatedProduct);
+
     })
 
     //delete
