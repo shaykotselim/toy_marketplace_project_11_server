@@ -67,7 +67,8 @@ async function run() {
                 status: updatedProduct.status
             },
         };
-
+        const result = await productCollection.updateOne(filter, updateDoc);
+        res.send(result); 
 
     })
 
