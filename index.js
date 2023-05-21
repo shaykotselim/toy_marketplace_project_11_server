@@ -55,6 +55,9 @@ async function run() {
 
     })
     // Put Area
+    app.put('/products/:id', async(req, res)=>{
+        const updatedProduct = req.body;
+    })
 
     //delete
     app.delete('/products/:id', async(req, res)=>{
